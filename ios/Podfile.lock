@@ -37,6 +37,9 @@ PODS:
   - Lock/Email (1.26.2):
     - CocoaLumberjack (~> 2.0)
     - Lock/UI
+  - Lock/Safari (1.26.2):
+    - CocoaLumberjack (~> 2.0)
+    - Lock/CoreUI
   - Lock/SMS (1.26.2):
     - CocoaLumberjack (~> 2.0)
     - Lock/UI
@@ -59,6 +62,7 @@ PODS:
 DEPENDENCIES:
   - Lock (~> 1.26)
   - Lock/Email
+  - Lock/Safari
   - Lock/SMS
   - Lock/TouchID
 
@@ -70,6 +74,6 @@ SPEC CHECKSUMS:
   SimpleKeychain: b50cef3b87939d480ea1143425c00f5b4b70fe21
   TouchIDAuth: 0cf861f58a2cacfc1c12cb02de4850729d943c81
 
-PODFILE CHECKSUM: b05bda4f21f97acaa7d32151fec9901cb5d0f6a2
+PODFILE CHECKSUM: 467b45c8dbb3e4099ce693caf204b4c15a435816
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

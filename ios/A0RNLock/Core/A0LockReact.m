@@ -22,6 +22,7 @@
 
 #import "A0LockReact.h"
 #import <Lock/Lock.h>
+#import <Lock/A0SafariAuthenticator.h>
 #import "A0Token+ReactNative.h"
 #import "A0UserProfile+ReactNative.h"
 
@@ -47,6 +48,10 @@
     NSDictionary *extra = @{
         @"lib_version": lockVersion,
     };
+    
+    A0SafariAuthenticator *safari = [[A0SafariAuthenticator alloc] initWithLock:_lock connectionName:@"google-oauth2" useUniversalLink:NO];
+    [_lock registerAuthenticators:@[safari]];
+    
     A0Telemetry *telemetry = [A0Telemetry telemetryEnabled] ? [[A0Telemetry alloc] initWithName:@"lock.react-native.ios" version:libraryVersion extra:extra] : nil;
     self.lock.telemetry = telemetry;
 }
